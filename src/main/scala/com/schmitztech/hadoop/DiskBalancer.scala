@@ -55,8 +55,9 @@ class DiskBalancer(directories: Seq[DataDirectory]) {
   }
 }
 
-object DiskBalancerMain extends App {
-  val disks = args
+object DiskBalancerMain {
+  def main(args: Array[String]): Unit = {
+    val disks = args
 
   println("Creating balancer...")
   val balancer = new DiskBalancer(disks.map(path => DataDirectory(new File(path))))
@@ -65,4 +66,5 @@ object DiskBalancerMain extends App {
 
   println("Running program...")
   balancer.run()
+  }
 }

@@ -1,0 +1,1 @@
+hdfs dfs -copyToLocal /user/hdfs/ha/hadoop-balancer-assembly-0.1-SNAPSHOT.jar ./
